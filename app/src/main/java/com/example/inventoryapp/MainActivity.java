@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
 
         long newRowId = db.insert(ProductEntry.TABLE_NAME, null, values);
         if (newRowId == -1) {
-            mDisplayView.append("Error inserting product\n");
+            Log.i(tag, "Error inserting product");
         } else {
-            mDisplayView.append("Product inserted with row id" + newRowId + "\n");
+            Log.i(tag, "Product inserted with row id: " + newRowId);
         }
     }
 }
